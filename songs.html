@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #181818;
+      color: #fff;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      width: 220px;
+      background: #000;
+      padding: 2em 1em 1em 1.5em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      z-index: 10;
+      min-height: 100vh;
+    }
+    .sidebar .logo {
+      font-size: 2em;
+      font-weight: bold;
+      color: #1db954;
+      margin-bottom: 2em;
+      letter-spacing: 2px;
+    }
+    .sidebar nav a {
+      display: block;
+      color: #b3b3b3;
+      text-decoration: none;
+      margin-bottom: 1.2em;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    .sidebar nav a:hover {
+      color: #fff;
+    }
+    .main {
+      margin-left: 240px;
+      padding: 2em 3vw 2em 3vw;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #222 0%, #181818 100%);
+    }
+    h2 {
+      color: #fff;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+    }
+    .section {
+      margin-bottom: 2.5em;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5em;
+    }
+    .card {
+      background: #242424;
+      border-radius: 10px;
+      padding: 1em;
+      text-align: center;
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .card:hover {
+      background: #333;
+      transform: translateY(-4px) scale(1.03);
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.7em;
+      box-shadow: 0 2px 8px #0006;
+    }
+    .card .title {
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 0.3em;
+      font-size: 1.05em;
+    }
+    .card .subtitle {
+      color: #b3b3b3;
+      font-size: 0.95em;
+    }
+    footer {
+      text-align: center;
+      color: #b3b3b3;
+      font-size: 0.95em;
+      margin: 2em 0 1em 0;
+    }
+    @media (max-width: 900px) {
+      .sidebar { width: 60px; padding-left: 0.5em; }
+      .sidebar .logo { font-size: 1.2em; margin-bottom: 1em; }
+      .sidebar nav a { font-size: 0.9em; margin-bottom: 0.8em; }
+      .main { margin-left: 70px; padding: 1.2em 2vw; }
+      .card img { width: 70px; height: 70px; }
+    }
+    @media (max-width: 600px) {
+      .sidebar { display: none; }
+      .main { margin-left: 0; padding: 1em 2vw; }
+      h2 { font-size: 1.1em; }
+      .card img { width: 50px; height: 50px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">Spotify</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Search</a>
+      <a href="#">Library</a>
+      <a href="#">Premium</a>
+    </nav>
+  </div>
+  <div class="main">
+    <h1 style="font-size:2em; color:#1db954; margin-bottom:0.5em;">Welcome to Spotify</h1>
+    <div class="section">
+      <h2>Trending Songs</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273e0e1e0e1e0e1e0e1e0e1e0e1" alt="Golden">
+          <div class="title">Golden</div>
+          <div class="subtitle">Jungle</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273b2b2b2b2b2b2b2b2b2b2b2b2" alt="River Washed Hair">
+          <div class="title">River Washed Hair</div>
+          <div class="subtitle">Indie Vibes</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273c3c3c3c3c3c3c3c3c3c3c3c3" alt="Catch Me Outside 2">
+          <div class="title">Catch Me Outside 2</div>
+          <div class="subtitle">DJ Flow</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273d4d4d4d4d4d4d4d4d4d4d4d4" alt="Lose My Mind">
+          <div class="title">Lose My Mind (feat. Doja Cat)</div>
+          <div class="subtitle">F1® The Movie</div>
+        </div>
+        <!-- More songs added below -->
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273e1e1e1e1e1e1e1e1e1e1e1e1" alt="What Did I Miss?">
+          <div class="title">What Did I Miss?</div>
+          <div class="subtitle">Alt Pop</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273f1f1f1f1f1f1f1f1f1f1f1f1" alt="WENT WEST">
+          <div class="title">WENT WEST</div>
+          <div class="subtitle">Folk Indie</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273a1a1a1a1a1a1a1a1a1a1a1a1" alt="Mama, I'm Coming Home">
+          <div class="title">Mama, I'm Coming Home</div>
+          <div class="subtitle">Ozzy Osbourne</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273b1b1b1b1b1b1b1b1b1b1b1b1" alt="RED FLAG.">
+          <div class="title">RED FLAG.</div>
+          <div class="subtitle">Hip-Hop</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273c1c1c1c1c1c1c1c1c1c1c1c1" alt="Love, Maybe">
+          <div class="title">Love, Maybe</div>
+          <div class="subtitle">Pop Ballad</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273d1d1d1d1d1d1d1d1d1d1d1d1" alt="Animals (Pt. I) [with Eminem]">
+          <div class="title">Animals (Pt. I) [with Eminem]</div>
+          <div class="subtitle">Eminem & Friends</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273e2e2e2e2e2e2e2e2e2e2e2e2" alt="War Pigs / Luke's Wall - 2012 - Remaster">
+          <div class="title">War Pigs / Luke's Wall - 2012 - Remaster</div>
+          <div class="subtitle">Black Sabbath</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273f7f7f7f7f7f7f7f7f7f7f7f7" alt="Tum Hi Ho">
+          <div class="title">Tum Hi Ho</div>
+          <div class="subtitle">Arijit Singh</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273e8e8e8e8e8e8e8e8e8e8e8e8" alt="Apna Bana Le">
+          <div class="title">Apna Bana Le</div>
+          <div class="subtitle">Arijit Singh</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273c9c9c9c9c9c9c9c9c9c9c9c9" alt="Kesariya">
+          <div class="title">Kesariya</div>
+          <div class="subtitle">Arijit Singh</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273b7b7b7b7b7b7b7b7b7b7b7b7" alt="Jai Jai Shivshankar">
+          <div class="title">Jai Jai Shivshankar</div>
+          <div class="subtitle">Vishal Dadlani, Benny Dayal</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273a6a6a6a6a6a6a6a6a6a6a6a6" alt="Teri Mitti">
+          <div class="title">Teri Mitti</div>
+          <div class="subtitle">B Praak</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273d8d8d8d8d8d8d8d8d8d8d8d8" alt="Ghungroo">
+          <div class="title">Ghungroo</div>
+          <div class="subtitle">Arijit Singh, Shilpa Rao</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Popular Artists</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab6761610000e5eb1db9541db9541db9541db954" alt="Kendrick Lamar">
+          <div class="title">Kendrick Lamar</div>
+          <div class="subtitle">Hip-Hop</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab6761610000e5eb2db9542db9542db9542db954" alt="Taylor Swift">
+          <div class="title">Taylor Swift</div>
+          <div class="subtitle">Pop</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab6761610000e5eb3db9543db9543db9543db954" alt="Drake">
+          <div class="title">Drake</div>
+          <div class="subtitle">Rap</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab6761610000e5eb4db9544db9544db9544db954" alt="Billie Eilish">
+          <div class="title">Billie Eilish</div>
+          <div class="subtitle">Alternative</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Popular Albums</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273e5e5e5e5e5e5e5e5e5e5e5e5" alt="HIT ME HARD AND SOFT">
+          <div class="title">HIT ME HARD AND SOFT</div>
+          <div class="subtitle">Billie Eilish</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273f6f6f6f6f6f6f6f6f6f6f6f6" alt="reputation">
+          <div class="title">reputation</div>
+          <div class="subtitle">Taylor Swift</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273a7a7a7a7a7a7a7a7a7a7a7a7" alt="Blonde">
+          <div class="title">Blonde</div>
+          <div class="subtitle">Frank Ocean</div>
+        </div>
+        <div class="card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273b8b8b8b8b8b8b8b8b8b8b8b8" alt="Un Verano Sin Ti">
+          <div class="title">Un Verano Sin Ti</div>
+          <div class="subtitle">Bad Bunny</div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      &copy; 2025 Spotify UI Demo | Inspired by <a href="https://open.spotify.com/" style="color:#1db954; text-decoration:none;">Spotify</a>
+    </footer>
+  </div>
+</body>
+</html>
